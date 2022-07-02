@@ -1,4 +1,10 @@
 <h1>Lists#index</h1>
+
+<%= form_with url: "/add_item", method: :post do |form| %>
+  <%= form.text_field :item_name %>
+  <%= form.submit "Add" %>
+<% end %>
+
 <% @items.each do |item| %>
   <div>
     <%= item.properties['name'] %>
