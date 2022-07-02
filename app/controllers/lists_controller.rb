@@ -29,4 +29,10 @@ class ListsController < ApplicationController
     redirect_to '/lists/index'
   end
 
+  def delete_list
+    query = $datastore.query('Item')
+    items = $datastore.run query
+    $datastore.delete items
+    redirect_to '/lists/index'
+  end
 end

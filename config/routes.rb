@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   post '/add_item', to: 'lists#add_item'
   get '/delete_item', to: 'lists#delete_item'
+  get '/delete_list', to: 'lists#delete_list'
   root 'auth#login'
 end
