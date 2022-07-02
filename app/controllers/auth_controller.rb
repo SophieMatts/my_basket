@@ -4,6 +4,6 @@ class AuthController < ApplicationController
 
   def handle_auth
     puts request.env['omniauth.auth'].info.email
-    redirect_to '/'
+    redirect_to '/lists/index'
   end
 end

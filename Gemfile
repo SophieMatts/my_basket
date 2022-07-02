@@ -73,3 +73,4 @@ end
 
 gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
+gem 'google-cloud-datastore'
