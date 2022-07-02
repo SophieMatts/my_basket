@@ -8,6 +8,7 @@
 <% @items.each do |item| %>
   <div>
     <%= item.properties['name'] %>
+    <button onclick="location.href='/delete_item?key_id=<%= item.key.id %>'">Delete</button>
     <%# <%= item.properties['quantity'] %>
   </div>
 <% end %>

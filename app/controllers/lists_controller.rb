@@ -19,9 +19,14 @@ class ListsController < ApplicationController
       t['email'] = 'sophiemattacks1@gmail.com'
       t['quantity'] = '1'
     end
-
     $datastore.save item
-
     redirect_to '/lists/index'
   end
+
+  def delete_item
+    item = $datastore.find 'Item', params[:key_id].to_i
+    $datastore.delete item
+    redirect_to '/lists/index'
+  end
+
 end
