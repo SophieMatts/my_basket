@@ -17,5 +17,5 @@
 
 @import "components/index";
 
-@import "index/index";
+@import "list/index";
 @import "login/login";

@@ -1,0 +1,18 @@
+.footer {
+  color: #FFA451;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.footer-label {
+  font-size: small;
+  float: left;
+  width: 80px;
+  position:relative;
+}
