@@ -1,4 +1,33 @@
-<h1>Auth#login</h1>
-<p>Find me in app/views/auth/login.html.erb</p>
 
-<%= link_to 'Sign in with Google', '/auth/google_oauth2', method: :post %>
+<div class="app-container">
+  <div class="topnav">
+    <div class="logo-div">
+      <div class="topnav-logo-a">My</div>
+      <div class="topnav-logo-b">Basket</div>
+    </div>
+  </div>
+
+  <div class="list-container">
+    <div class="items">
+      <div class="welcome">
+        <div class="welcome-text">Welcome to</div>
+        <div class="logo-div">
+          <div class="topnav-logo-a">My</div>
+          <div class="topnav-logo-b">Basket</div>
+        </div>
+      </div>
+      <div class="sign-in-link">
+        <%= image_tag "shopping-basket.png", class: "basket"%>
+        <%= link_to 'Sign in here, with Google', '/auth/google_oauth2', method: :post, class: "sign-in-text" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="footer-label"><p>Terms</p></div>
+    <div class="footer-label"><p>Privacy</p></div>
+    <div class="footer-label"><p>License</p></div>
+  </div>
+
+</div>
