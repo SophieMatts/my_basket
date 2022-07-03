@@ -10,14 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #CEE5D0;
-}
-
-
-
-
-
-.delete {
-  justify-content: center;
-  text-align: center;
 }

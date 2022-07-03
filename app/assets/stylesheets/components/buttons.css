@@ -1,6 +1,7 @@
 .button-add {
   font-family: 'Quicksand',sans-serif;
   font-weight: bold;
+  font-size: 18px;
   color: #FFA451;
   border-radius: 16px;
   border-color:#FFA451;
@@ -21,8 +22,12 @@
   color: #FFA451;
   margin-left: auto;
   margin-right: 15px;
+  cursor: pointer;
 }
 
+.button-delete:hover {
+  color: red;
+}
 .gg-trash {
   box-sizing: border-box;
   position: relative;
@@ -66,4 +71,25 @@
   border-top-right-radius: 2px;
   top: -7px;
   left: -2px
+}
+
+.button-delete-all {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  border-radius: 16px;
+  border-color:#FFA451;
+  background-color: #FFA451;
+  width: 551px;
+  height:45px;
+  margin-top: 10px;
+  /* margin-left: 10px; */
+  border: 1px solid #cccccc;
+}
+
+.button-delete-all:hover {
+  background-color: white;
+  color: #FFA451;
+  cursor: pointer;
 }
