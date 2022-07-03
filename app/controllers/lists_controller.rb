@@ -7,6 +7,8 @@ class ListsController < ApplicationController
   )
 
   def index
+    redirect_to '/' if session[:email].nil?
+
     query = $datastore.query('Item').where('email', '=', session[:email])
     @items = $datastore.run query
   end
