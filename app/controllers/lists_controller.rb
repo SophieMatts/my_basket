@@ -7,7 +7,7 @@ class ListsController < ApplicationController
   )
 
   def index
-    redirect_to '/' if session[:email].nil?
+    redirect_to '/login' if session[:email].nil?
 
     query = $datastore.query('Item').where('email', '=', session[:email])
     @items = $datastore.run query
@@ -20,19 +20,19 @@ class ListsController < ApplicationController
       t['quantity'] = '1'
     end
     $datastore.save item
-    redirect_to '/lists/index'
+    redirect_to '/'
   end
 
   def delete_item
     item = $datastore.find 'Item', params[:key_id].to_i
     $datastore.delete item
-    redirect_to '/lists/index'
+    redirect_to '/'
   end
 
   def delete_list
     query = $datastore.query('Item').where('email', '=', session[:email])
     items = $datastore.run query
     $datastore.delete items
-    redirect_to '/lists/index'
+    redirect_to '/'
   end
 end
