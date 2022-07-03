@@ -4,6 +4,7 @@
   font-weight: bold;
   text-align: center;
   position: fixed;
+  height: 50px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -14,5 +15,4 @@
   font-size: small;
   float: left;
   width: 80px;
-  position:relative;
 }

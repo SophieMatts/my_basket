@@ -1,11 +1,10 @@
 .app-container {
-  height: 100vh;
-  /* min-height: 90vh; */
+  height: 100%;
 }
 
 
 .list-container {
-  height: 100%;
+  height: calc(100vh - 110px);
   width: 100%;
   display: flex;
   align-items: center;
