@@ -7,15 +7,14 @@ class ListsController < ApplicationController
   )
 
   def index
-    query = $datastore.query('Item')
-      # where ("done", "=", false)
+    query = $datastore.query('Item').where('email', '=', session[:email])
     @items = $datastore.run query
   end
 
   def add_item
     item = $datastore.entity 'Item' do |t|
       t['name'] = params[:item_name]
-      t['email'] = 'sophiemattacks1@gmail.com'
+      t['email'] = session[:email]
       t['quantity'] = '1'
     end
     $datastore.save item
@@ -29,7 +28,7 @@ class ListsController < ApplicationController
   end
 
   def delete_list
-    query = $datastore.query('Item')
+    query = $datastore.query('Item').where('email', '=', session[:email])
     items = $datastore.run query
     $datastore.delete items
     redirect_to '/lists/index'
