@@ -18,6 +18,7 @@
 input[type=text] {
   font-family: 'Quicksand',sans-serif;
   color:grey;
+  font-weight: bold;
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
