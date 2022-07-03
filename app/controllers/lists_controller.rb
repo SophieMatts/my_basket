@@ -6,7 +6,6 @@ class ListsController < ApplicationController
     credentials: '/Users/sophiemattacks/Repos/Google/my_basket/plated-mesh-355110-58e596b5549b.json'
   )
 
-
   def index
     query = $datastore.query('Item')
       # where ("done", "=", false)

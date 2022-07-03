@@ -1,16 +1,38 @@
-<h1>Lists#index</h1>
-
-<%= form_with url: "/add_item", method: :post do |form| %>
-  <%= form.text_field :item_name %>
-  <%= form.submit "Add" %>
-<% end %>
-
-<% @items.each do |item| %>
-  <div>
-    <%= item.properties['name'] %>
-    <button onclick="location.href='/delete_item?key_id=<%= item.key.id %>'">Delete</button>
-    <%# <%= item.properties['quantity'] %>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<div class="app-cotainer">
+  <div class="topnav">
+    <a class="active" href="#home">MyBasket</a>
+    <a>Main List</a>
+    <a>Favourites</a>
   </div>
-<% end %>
 
-<button onclick="location.href='/delete_list'">Delete List</button>
+
+  <div class="list-container">
+    <div class="additem">
+      <%= form_with url: "/add_item", method: :post do |form| %>
+        <%= form.text_field :item_name %>
+        <%= form.submit "Add" %>
+      <% end %>
+
+      <% @items.each do |item| %>
+        <div>
+          <%= item.properties['name'] %>
+          <button onclick="location.href='/delete_item?key_id=<%= item.key.id %>'">Delete</button>
+          <%# <%= item.properties['quantity'] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <button onclick="location.href='/delete_list'">Delete List</button>
+  </div>
+
+
+
+
+</div>
