@@ -2,33 +2,44 @@
 
 <div class="app-container">
   <div class="topnav">
-    <a class="active" href="#home">MyBasket</a>
-    <a>Main List</a>
-    <a>Favourites</a>
+    <div class="logo-div">
+      <div class="topnav-logo-a">My</div>
+      <div class="topnav-logo-b">Basket</div>
+    </div>
+    <div class="topnav-heading"> Main List</div>
+    <div class="topnav-heading">Favourites</div>
   </div>
-
 
   <div class="list-container">
-    <div class="additem">
-      <%= form_with url: "/add_item", method: :post do |form| %>
-        <%= form.text_field :item_name %>
-        <%= form.submit "Add" %>
-      <% end %>
 
-      <% @items.each do |item| %>
-        <div>
-          <%= item.properties['name'] %>
-          <button onclick="location.href='/delete_item?key_id=<%= item.key.id %>'">Delete</button>
-          <%# <%= item.properties['quantity'] %>
-        </div>
-      <% end %>
+    <div class="items">
+
+      <div class="add-item">
+        <%= form_with url: "/add_item", html: { autocomplete: "off" }, method: :post do |form| %>
+          <%= form.text_field :item_name %>
+          <%= form.submit "Add", class: "button-add" %>
+        <% end %>
+      </div>
+
+      <div class="saved-items">
+        <% @items.each do |item| %>
+          <div class="saved-item">
+            <div class="item-text">
+              <%= item.properties['name'] %>
+            </div>
+            <div class="button-delete">
+            <i class="gg-trash" onclick="location.href='/delete_item?key_id=<%= item.key.id %>'"></i>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="delete">
+      <button onclick="location.href='/delete_list'">Delete List</button>
     </div>
   </div>
-
-  <div>
-    <button onclick="location.href='/delete_list'">Delete List</button>
-  </div>
-
 
   <div class="footer">
     <div class="footer-label"><p>Terms</p></div>

@@ -1,5 +1,23 @@
+.app-container {
+  height: 100vh;
+  /* min-height: 90vh; */
+}
 
 
-.additem {
-  justify-content: space-around;
+.list-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CEE5D0;
+}
+
+
+
+
+
+.delete {
+  justify-content: center;
+  text-align: center;
 }
