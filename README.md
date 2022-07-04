@@ -1,24 +1,23 @@
-# README
+# MyBasket
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Language: Ruby-on-Rails
 
-Things you may want to cover:
+Function: Shopping Basket
 
-* Ruby version
+This app works as a shopping list, which has the following features:
+* Google sign-in prompt
+* Add an item to your list
+* Edit an item on your list
+* Delete an individual item on your list
+* Delete the entire list
+---
 
-* System dependencies
+## Figma
+### Basic
+![Figma-MyBasket-Basic](design/Figma-MyBasket-Basic.png)
 
-* Configuration
+### Upgrade
+![Figma-MyBasket-Upgrade](design/Figma-MyBasket-Upgrade.png)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Colour Palette
+![Figma-MyBasket-ColourPalette](design/Figma-MyBasket-ColourPalette.png)
